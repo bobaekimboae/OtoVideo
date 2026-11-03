@@ -350,7 +350,7 @@ export default function App() {
               {photos.length < MAX_PHOTOS && <button type="button" className="add-photo-tile" onClick={(event) => { event.stopPropagation(); fileInputRef.current?.click(); }}><Plus size={24} /><span>사진 추가</span></button>}
             </div>}
           </div>
-          <input ref={fileInputRef} className="visually-hidden" type="file" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.heic,.heif" onChange={(event) => { addPhotos(event.target.files); event.target.value = ''; }} />
+          <input ref={fileInputRef} className="visually-hidden" type="file" multiple accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" onChange={(event) => { addPhotos(event.target.files); event.target.value = ''; }} />
           {photos.length > 0 && <div className="photo-footnote"><Check size={14} /><span>첫 번째 사진이 영상의 첫 장면입니다. 사진을 드래그해 순서를 바꾸세요.</span></div>}
         </section>
 
